@@ -119,6 +119,13 @@ motion in matrix form:
 
 Each component of this equation represents a fundamental physical
 property of the structural system.
+| Term   | Description |
+|--------|-------------|
+| [M]    | Mass Matrix (Represents the structure's inertial properties) |
+| [C]    | Damping Matrix (Represents energy dissipation) |
+| [K]    | Stiffness Matrix (Represents the structure's resistance to deformation) |
+| {u(t)} | Vector of nodal displacements as a function of time |
+| {p(t)} | Vector of external forces applied to the structure |
 
 Note: {ü} and {u̇} represent the second and first time derivatives of the
 displacement vector, corresponding to acceleration and velocity,
