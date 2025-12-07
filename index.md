@@ -1,11 +1,15 @@
 # An Introduction to Modal Analysis: Understanding the Dynamic Behavior of Structures
 
 ## Table of Contents
-- [1. Introduction](#1.0 Learning Objectives)
-- [2. Mathematical Model](#2.0 Key Concepts and Definitions in Modal Analysis)
-- [3. FEM Analysis](#3.0 The Mathematical Foundation of Modal Analysis)
-- [4. Experimental Modal Analysis](#4.0 Computational Modal Analysis via the Finite Element Method (FEM))
-- [5. Conclusion](#9.0 conclusion)
+- [1. Learning Objectives](#10-learning-objectives)
+- [2. Key concepts](#20-key-concepts-and-definitions-in-modal-analysis)
+- [3. Mathematical foundation](#30-the-mathematical-foundation-of-modal-analysis)
+- [4. FEM Analysis](#40-computational-modal-analysis-via-the-finite-element-method-fem)
+- [5. Conclusion](#50-experimental-modal-analysis-ema-a-generic-summary)
+- [6. Conclusion](#60-the-influence-and-importance-of-modal-analysis)
+- [7. Conclusion](#70-real-life-examples)
+- [8. Conclusion](#80-conclusion)
+- [9. References](#90-references)
 
 # 1.0 Learning Objectives
 
@@ -64,7 +68,7 @@ analysis is, in essence, the study of these natural characteristics.
 
 2.2 Core Modal Parameters
 
-Natural Frequency (or Resonant Frequency): A natural frequency is an
+**Natural Frequency (or Resonant Frequency):** A natural frequency is an
 inherent frequency at which a structure will vibrate if disturbed and
 then allowed to move freely without any external forces. Every structure
 possesses multiple natural frequencies. When the frequency of an
@@ -74,7 +78,7 @@ vibration increases dramatically, which can lead to excessive noise,
 material fatigue, or catastrophic failure if not accounted for in the
 design.
 
-Mode Shape: A mode shape is the specific deformation pattern or shape
+**Mode Shape:** A mode shape is the specific deformation pattern or shape
 that a structure exhibits when vibrating at a particular natural
 frequency. Each natural frequency has a corresponding, unique mode
 shape. For example, the first natural frequency of a simple beam might
@@ -83,7 +87,7 @@ correspond to more complex bending or twisting shapes. Understanding
 mode shapes is crucial for diagnosing vibration problems, as it shows
 how the structure is deforming during vibration.
 
-Damping: Damping is a property of a material or system that causes
+**Damping:** Damping is a property of a material or system that causes
 vibration energy to be dissipated, typically as heat. This energy loss
 restricts the amplitude of vibrations at resonance and causes free
 vibrations to decay over time. Without damping, a structure excited at
@@ -91,7 +95,7 @@ its natural frequency would theoretically vibrate with infinite
 amplitude. Damping characteristics are essential for accurately
 predicting the real-world response of a structure.
 
-Frequency Response Function (FRF): The Frequency Response Function (FRF)
+**Frequency Response Function (FRF):** The Frequency Response Function (FRF)
 is the mathematical representation of the plot described in our flat
 plate analogy---the graph of response amplitude versus the frequency of
 an applied force. It represents the ratio of a structure's output
@@ -199,7 +203,7 @@ prototype exists, allowing for early optimization and validation.
 A finite element analysis for modal analysis generally consists of three
 basic steps:
 
-Pre-Processor (Modeling): In this initial phase, the analyst builds a
+**Pre-Processor (Modeling):** In this initial phase, the analyst builds a
 virtual model of the structure. This involves creating the geometric
 model, defining material properties (e.g., Young's Modulus, Mass
 Density, Poisson's Ratio), applying boundary conditions to simulate how
@@ -209,14 +213,14 @@ finite elements. The accuracy of the final solution is critically
 dependent on the quality and density of this mesh, making it a key area
 of expertise for the analyst.
 
-Solution (Solving): Once the model is defined, the FEM software (such as
+**Solution (Solving):** Once the model is defined, the FEM software (such as
 ANSYS) assembles the global mass \[M\] and stiffness \[K\] matrices for
 the entire system based on the properties of each element in the mesh.
 The software then uses numerical algorithms to solve the eigenvalue
 problem (\[K\] - ω²\[M\]){Φ} = {0}, calculating the natural frequencies
 (eigenvalues) and mode shapes (eigenvectors) of the structure.
 
-Post-Processor (Reviewing Results): After the solution is complete, this
+**Post-Processor (Reviewing Results):** After the solution is complete, this
 step involves visualizing and interpreting the results. The analyst can
 review tables of the computed modal frequencies and, most importantly,
 view animated visualizations of the mode shapes. These animations show
