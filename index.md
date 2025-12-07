@@ -118,6 +118,7 @@ motion in matrix form:
 
 Each component of this equation represents a fundamental physical
 property of the structural system.
+
 | Term   | Description |
 |--------|-------------|
 | [M]    | Mass Matrix (Represents the structure's inertial properties) |
