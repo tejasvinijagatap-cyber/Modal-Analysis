@@ -5,9 +5,9 @@
 - [2. Key concepts](#20-key-concepts-and-definitions-in-modal-analysis)
 - [3. Mathematical foundation](#30-the-mathematical-foundation-of-modal-analysis)
 - [4. FEM Analysis](#40-computational-modal-analysis-via-the-finite-element-method-fem)
-- [5. Conclusion](#50-experimental-modal-analysis-ema-a-generic-summary)
-- [6. Conclusion](#60-the-influence-and-importance-of-modal-analysis)
-- [7. Conclusion](#70-real-life-examples)
+- [5. Experimental Modal analysis](#50-experimental-modal-analysis-ema-a-generic-summary)
+- [6. Importance of Modal analysis](#60-the-influence-and-importance-of-modal-analysis)
+- [7. Real life examples](#70-real-life-examples)
 - [8. Conclusion](#80-conclusion)
 - [9. References](#90-references)
 
