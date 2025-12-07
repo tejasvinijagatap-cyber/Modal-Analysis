@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 ## Table of Contents
 - [1. Introduction](#1.0 Learning Objectives)
 - [2. Mathematical Model](#2.0 Key Concepts and Definitions in Modal Analysis)
 - [3. FEM Analysis](#3.0 The Mathematical Foundation of Modal Analysis)
 - [4. Experimental Modal Analysis](#4.0 Computational Modal Analysis via the Finite Element Method (FEM))
 - [5. Conclusion](#9.0 conclusion)
+=======
+# An Introduction to Modal Analysis: Understanding the Dynamic Behavior of Structures
+>>>>>>> fd6a0158cfadcc39759686e6d694815c6a36d57c
 
 # An Introduction to Modal Analysis: Understanding the Dynamic Behavior of Structures
 
