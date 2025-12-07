@@ -1,7 +1,7 @@
-An Introduction to Modal Analysis: Understanding the Dynamic Behavior of
+# An Introduction to Modal Analysis: Understanding the Dynamic Behavior of
 Structures
 
-1.0 Learning Objectives
+## 1.0 Learning Objectives
 
 This report provides a foundational understanding of modal analysis, a
 critical discipline for predicting and analyzing the vibrational
@@ -40,6 +40,9 @@ are intrinsic characteristics determined by the structure's mass,
 stiffness, and energy dissipation mechanisms. This section defines the
 essential modal parameters that characterize how any structure---from a
 simple beam to a complex bridge---responds to dynamic forces.
+
+![Mode shape](mode shapes.png)
+
 
 2.1 A Non-Mathematical Overview
 
