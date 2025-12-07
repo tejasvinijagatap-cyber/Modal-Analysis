@@ -1,5 +1,4 @@
-# An Introduction to Modal Analysis: Understanding the Dynamic Behavior of
-Structures
+# An Introduction to Modal Analysis: Understanding the Dynamic Behavior of Structures
 
 ## 1.0 Learning Objectives
 
