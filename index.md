@@ -1,7 +1,7 @@
-An Introduction to Modal Analysis: Understanding the Dynamic Behavior of
+# An Introduction to Modal Analysis: Understanding the Dynamic Behavior of
 Structures
 
-1.0 Learning Objectives
+## 1.0 Learning Objectives
 
 This report provides a foundational understanding of modal analysis, a
 critical discipline for predicting and analyzing the vibrational
