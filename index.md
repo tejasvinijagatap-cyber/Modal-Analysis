@@ -1,7 +1,13 @@
-# An Introduction to Modal Analysis: Understanding the Dynamic Behavior of
-Structures
+## Table of Contents
+- [1. Introduction](#1.0 Learning Objectives)
+- [2. Mathematical Model](#2.0 Key Concepts and Definitions in Modal Analysis)
+- [3. FEM Analysis](#3.0 The Mathematical Foundation of Modal Analysis)
+- [4. Experimental Modal Analysis](#4.0 Computational Modal Analysis via the Finite Element Method (FEM))
+- [5. Conclusion](#9.0 conclusion)
 
-## 1.0 Learning Objectives
+# An Introduction to Modal Analysis: Understanding the Dynamic Behavior of Structures
+
+# 1.0 Learning Objectives
 
 This report provides a foundational understanding of modal analysis, a
 critical discipline for predicting and analyzing the vibrational
@@ -32,7 +38,7 @@ analysis in design, troubleshooting, and structural health monitoring.
 
 ------------------------------------------------------------------------
 
-2.0 Key Concepts and Definitions in Modal Analysis
+# 2.0 Key Concepts and Definitions in Modal Analysis
 
 To understand a structure's dynamic behavior, one must first grasp its
 inherent vibrational properties. These properties are not random; they
@@ -100,7 +106,7 @@ robust mathematical framework.
 
 ------------------------------------------------------------------------
 
-3.0 The Mathematical Foundation of Modal Analysis
+# 3.0 The Mathematical Foundation of Modal Analysis
 
 Mathematics provides the formal language to describe and predict the
 dynamic behavior of structures. The equations of motion, expressed as
@@ -119,6 +125,14 @@ motion in matrix form:
 
 Each component of this equation represents a fundamental physical
 property of the structural system.
+
+| Term   | Description |
+|--------|-------------|
+| [M]    | Mass Matrix (Represents the structure's inertial properties) |
+| [C]    | Damping Matrix (Represents energy dissipation) |
+| [K]    | Stiffness Matrix (Represents the structure's resistance to deformation) |
+| {u(t)} | Vector of nodal displacements as a function of time |
+| {p(t)} | Vector of external forces applied to the structure |
 
 Note: {ü} and {u̇} represent the second and first time derivatives of the
 displacement vector, corresponding to acceleration and velocity,
@@ -170,7 +184,7 @@ on the Finite Element Method (FEM) to provide a numerical solution.
 
 ------------------------------------------------------------------------
 
-4.0 Computational Modal Analysis via the Finite Element Method (FEM)
+# 4.0 Computational Modal Analysis via the Finite Element Method (FEM)
 
 The Finite Element Method (FEM) is the dominant computational technique
 for performing modal analysis on complex, real-world structures. This
@@ -239,7 +253,7 @@ physical reality.
 
 ------------------------------------------------------------------------
 
-5.0 Experimental Modal Analysis (EMA): A Generic Summary
+# 5.0 Experimental Modal Analysis (EMA): A Generic Summary
 
 While FEM allows us to explore designs in a virtual space, Experimental
 Modal Analysis (EMA) is the process of listening to the structure
@@ -303,7 +317,7 @@ influence on engineering design and asset management.
 
 ------------------------------------------------------------------------
 
-6.0 The Influence and Importance of Modal Analysis
+# 6.0 The Influence and Importance of Modal Analysis
 
 The strategic value of modal analysis in modern engineering cannot be
 overstated. By revealing a structure's inherent dynamic characteristics,
@@ -347,7 +361,7 @@ better, safer, and more efficient products and systems.
 
 ------------------------------------------------------------------------
 
-7.0 Real-Life Examples
+# 7.0 Real-Life Examples
 
 The principles of modal analysis are applied across numerous industries
 to solve practical engineering challenges, improve product designs, and
@@ -391,7 +405,7 @@ engineering.
 
 ------------------------------------------------------------------------
 
-8.0 Conclusion
+# 8.0 Conclusion
 
 Modal analysis is an essential discipline in modern engineering for
 understanding, predicting, and controlling the dynamic behavior of
@@ -410,7 +424,7 @@ bridges to advanced aerospace vehicles and everyday consumer products.
 
 ------------------------------------------------------------------------
 
-9.0 References
+# 9.0 References
 
 The following works are referenced in the study of modal analysis.
 
