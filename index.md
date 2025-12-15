@@ -152,7 +152,7 @@ From the Toolbox, drag **Modal** into the Project Schematic.
 
 Right-click Geometry cell --> Import Geometry
 
-Geometry - windmill\_blade.stp
+Geometry - [windmill_blade.stp](windmill_blade.stp)
 
 **Engineering Data:**
 
