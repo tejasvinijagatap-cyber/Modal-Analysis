@@ -1,36 +1,3 @@
-# An Introduction to Modal Analysis: Understanding the Dynamic Behavior of Structures
-
-## Table of Contents
-- [1. Learning Objectives](#10-learning-objectives)
-- [2. Key concepts](#20-key-concepts-and-definitions-in-modal-analysis)
-- [3. Mathematical foundation](#30-the-mathematical-foundation-of-modal-analysis)
-- [4. FEM Analysis](#40-computational-modal-analysis-via-the-finite-element-method-fem)
-- [5. Experimental Modal analysis](#50-experimental-modal-analysis-ema-a-generic-summary)
-- [6. Importance of Modal analysis](#60-the-influence-and-importance-of-modal-analysis)
-- [7. Real life examples](#70-real-life-examples)
-- [8. Conclusion](#80-conclusion)
-- [9. References](#90-references)
-
-
-------------------------------------------------------------------------
-
-# 2.0 Key Concepts and Definitions in Modal Analysis
-
-To understand a structure's dynamic behavior, one must first grasp its
-inherent vibrational properties. These properties are not random; they
-are intrinsic characteristics determined by the structure's mass,
-stiffness, and energy dissipation mechanisms. This section defines the
-essential modal parameters that characterize how any structure---from a
-simple beam to a complex bridge---responds to dynamic forces.
-
-![Mode shape](mode shapes.png)
-
-
-
-
-
-
-------------------------------------------------------------------------
 # Modal Analysis: Understanding Structural Vibration
 
 Modal analysis is a basic part of structural engineering that gives you the tools you need to understand, predict, and control how structures vibrate. Modal analysis is important for making safe, reliable, and efficient designs, from making sure that a bridge can handle traffic loads to improving the performance of an aerospace part. This report is a complete introduction for professionals who want to learn the basics and how to use this powerful engineering technique in real life. The following goals will help you learn the most important things and give you a clear path to understanding how structural vibration works in the real world.
@@ -139,11 +106,11 @@ There are two main ways that engineers do modal analysis. The first is computati
 
 Computational Modal Analysis (CMA) using FEM engineers often use Computational Modal Analysis (CMA) to forecast virtual model temporal behaviour. Most use the Finite Element Method (FEM). It simplifies complex structures into little elements. FEA for modal analysis follows these steps:
 
-1. Pre-Processor: At this step, the physical structure is mathematically modelled. Create a "mesh" of connected finite elements to depict the shape. Engineers establish material parameters like Young's Modulus and density and boundary conditions like fixed supports to sustain or limit the construction.
+1. **Pre-Processor:** At this step, the physical structure is mathematically modelled. Create a "mesh" of connected finite elements to depict the shape. Engineers establish material parameters like Young's Modulus and density and boundary conditions like fixed supports to sustain or limit the construction.
 
-2. Solution: FEA software solves the meshed model using basic equations of motion. After building the mass [M] and stiffness [K] matrices using geometry and material data, it solves the eigenvalue problem to obtain the system's natural frequencies and eigenvectors.
+2. **Solution:** FEA software solves the meshed model using basic equations of motion. After building the mass [M] and stiffness [K] matrices using geometry and material data, it solves the eigenvalue problem to obtain the system's natural frequencies and eigenvectors.
 
-3. Post-Processor: Analyse and review data. Reviewing the solution results lets engineers explore tables of computed natural frequencies and animate mode shapes to show how the structure deforms at each frequency.
+3. **Post-Processor:** Analyse and review data. Reviewing the solution results lets engineers explore tables of computed natural frequencies and animate mode shapes to show how the structure deforms at each frequency.
 
 Limitations of Computational Modal Analysis (CMA) depends on idealised assumptions that are not often true in real life, like perfect material homogeneity, isotropic properties, and rigid boundary conditions.
 
@@ -161,103 +128,103 @@ Experimental Modal Analysis (EMA) finds a structure's physical modal parameters,
 
 Key Process Steps:
 
-Instrumentation: Sensors (usually accelerometers) are attached to the structure to pick up vibrations.
+**Instrumentation:** Sensors (usually accelerometers) are attached to the structure to pick up vibrations.
 
-Excitation: An impact hammer or shaker is used to make something vibrate by applying a known force.
+**Excitation:** An impact hammer or shaker is used to make something vibrate by applying a known force.
 
-Data Acquisition: We use FFT analysis to get the input force and output reaction, which lets us find the Frequency Reaction Functions (FRFs).
+**Data Acquisition:** We use FFT analysis to get the input force and output reaction, which lets us find the Frequency Reaction Functions (FRFs).
 
-Parameter Extraction: The software looks at the peaks in the FRF to find the exact frequencies and mode shapes.
+**Parameter Extraction:** The software looks at the peaks in the FRF to find the exact frequencies and mode shapes.
 
 ---
 
 ## 5.0 Implementation in Ansys
 
-Step 1: Workbench Setup
+**Step 1: Workbench Setup**
 
-Choose System:
+**Choose System:**
 
-From the Toolbox, drag Modal into the Project Schematic.
+    From the Toolbox, drag **Modal** into the Project Schematic.
 
+![Add Modal into project](Add Modal into project.png)
 
+**Geometry:**
 
-Geometry:
+    Right-click Geometry cell --> Import Geometry
 
-Right-click Geometry cell  Import Geometry
+    Geometry - windmill\_blade.stp
 
-Geometry - windmill\_blade.stp
+**Engineering Data:**
 
-Engineering Data:
+    Add material --> Composite, Epoxy/glass Fiber, woven prepreg, biax.
 
-Add material  Composite, Epoxy/glass Fiber, woven prepreg, biax.
+    Set Young's Modulus (Stiffness) and Density (Mass).
 
-Set Young's Modulus (Stiffness) and Density (Mass).
+![Add new Material](Add new Material.png)
 
+**Step 2: Mechanical Setup**
 
+1. **Meshing**
 
-Step 2: Mechanical Setup
+    Add sizing controls to the trailing edge and tips to make the mesh more precise. Click on Mesh and then click on Generate Mesh.
 
-1. Meshing
+![Meshing](Meshing.png)
 
-Add sizing controls to the trailing edge and tips to make the mesh more precise. Click on Mesh and then click on Generate Mesh.
+2. **Boundary Conditions (Setup)**
 
+    Context: A windmill blade is a cantilever beam (fixed at one end, free at the other).
 
+    Right-click Modal (A5) --> Insert --> Fixed Support.
 
-2. Boundary Conditions (Setup)
+![Apply Boundary Conditions](Apply Boundary Conditions.png)
 
-Context: A windmill blade is a cantilever beam (fixed at one end, free at the other).
+3. **Analysis Settings**
 
-Right-click Modal (A5)  Insert  Fixed Support.
+    Click **Analysis Settings** in the tree.
 
+![Analysis Settings](Analysis Settings.png)
 
+**Max Modes to Find:** The default is usually 6. For a blade, you typically want to see at least the first 6 to 10 modes.
 
-3. Analysis Settings
+**Step 3: Solution & post-processing**
 
-Click Analysis Settings in the tree.
+1. **Solve**
 
+    Right-click Solution (A6) --> Solve.
 
+    Look at the Tabular Data table to see the natural frequencies (Hz) for Review Frequencies.
 
-Max Modes to Find: The default is usually 6. For a blade, you typically want to see at least the first 6 to 10 modes.
+2. **Visualizing Mode Shapes**
 
-Phase 3: Solution & post-processing
+    To see how the blade moves at these **Frequencies(Hz)**:
 
-1. Solve
+![Natural Frequencies](Natural Frequencies.png)
 
-Right-click Solution (A6)  Solve.
+    Select all the rows in the Tabular Data window.
 
-Look at the Tabular Data table to see the natural frequencies (Hz) for Review Frequencies.
+![Create Mode Shapes Result](Create Mode Shapes Result.png)
 
-2. Visualizing Mode Shapes
+    Right-click --> **Create Mode Shape Results**.
 
-To see how the blade moves at these frequencies:
+    This adds **"Total Deformation"** items to your Solution tree.
 
+    Right-click Solution --> Evaluate All Results.
 
+![Total Deformation_1](Total Deformation_1.png)
 
-Select all the rows in the Tabular Data window.
+![Total Deformation_2](Total Deformation_2.png)
 
+![Total Deformation_3](Total Deformation_3.png)
 
+    From Solution Information change solution output to **Participation Factor Summary**.
 
-Right-click  Create Mode Shape Results.
+![Participation Factor Summary](Participation Factor Summary.png)
 
-This adds "Total Deformation" items to your Solution tree.
+    Click on each Total Deformation to see the different modes such as Flap-wise (bending flat), Edgewise (bending along the edge), or Torsional (twisting) modes.
 
-Right-click Solution  Evaluate All Results.
+**Participation Factor:** Mode participation and effective mass measure Each mode measures the mass movement in each direction. A high value indicates that excitations in that direction will effectively stimulate the mode.
 
-
-
-
-
-
-
-From Solution Information change solution output to Participation Factor Summary
-
-
-
-Click on each Total Deformation to see the different modes such as Flap-wise (bending flat), Edgewise (bending along the edge), or Torsional (twisting) modes.
-
-Participation Factor: Mode participation and effective mass measure Each mode measures the mass movement in each direction. A high value indicates that excitations in that direction will effectively stimulate the mode.
-
-Ratio of Effective Mass to Total Mass: If the ratio of effective mass to total mass is close to or equal to 1, all modes have been extracted. A 1.0 ratio is unnecessary, while ratio greater than 0.9 are usual.
+**Ratio of Effective Mass to Total Mass:** If the ratio of effective mass to total mass is close to or equal to 1, all modes have been extracted. A 1.0 ratio is unnecessary, while ratio greater than 0.9 are usual.
 
 ---
 
@@ -275,7 +242,7 @@ Solution: By identifying these frequencies early, engineers can change stiffness
 
 ### 6.2 Applications Across Industries
 
-| Industry               | Key Applications & Use Cases                                                                                                     | Primary Benefit                                                                    |
+| **Industry**              | **Key Applications & Use Cases**                                                                                                     | **Primary Benefit**                                                                    |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | Civil Engineering      | Structural Health Monitoring (SHM) of bridges & buildings. Real-time monitoring of snow loads on industrial roofs.               | Assess structural integrity, detect damage, and prevent collapse.                  |
 | Aerospace & Automotive | Validating drone frames. Analysing brake discs (thermal/vibrational) & tire dynamics. Testing rocket engines for extreme forces. | Ensure components can withstand operational forces and optimize dynamic behaviour. |
