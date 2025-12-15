@@ -144,21 +144,21 @@ Key Process Steps:
 
 **Choose System:**
 
-    From the Toolbox, drag **Modal** into the Project Schematic.
+From the Toolbox, drag **Modal** into the Project Schematic.
 
 ![Add Modal into project](Add Modal into project.png)
 
 **Geometry:**
 
-    Right-click Geometry cell --> Import Geometry
+Right-click Geometry cell --> Import Geometry
 
-    Geometry - windmill\_blade.stp
+Geometry - windmill\_blade.stp
 
 **Engineering Data:**
 
-    Add material --> Composite, Epoxy/glass Fiber, woven prepreg, biax.
+Add material --> **Composite, Epoxy/glass Fiber, woven prepreg, biax**.
 
-    Set Young's Modulus (Stiffness) and Density (Mass).
+Set Young's Modulus (Stiffness) and Density (Mass).
 
 ![Add new Material](Add new Material.png)
 
@@ -200,15 +200,15 @@ Key Process Steps:
 
 ![Natural Frequencies](Natural Frequencies.png)
 
-    Select all the rows in the Tabular Data window.
+Select all the rows in the Tabular Data window.
 
 ![Create Mode Shapes Result](Create Mode Shapes Result.png)
 
-    Right-click --> **Create Mode Shape Results**.
+Right-click --> **Create Mode Shape Results**.
 
-    This adds **"Total Deformation"** items to your Solution tree.
+This adds **"Total Deformation"** items to your Solution tree.
 
-    Right-click Solution --> Evaluate All Results.
+Right-click Solution --> Evaluate All Results.
 
 ![Total Deformation_1](Total Deformation_1.png)
 
@@ -216,11 +216,11 @@ Key Process Steps:
 
 ![Total Deformation_3](Total Deformation_3.png)
 
-    From Solution Information change solution output to **Participation Factor Summary**.
+From Solution Information change solution output to **Participation Factor Summary**.
 
 ![Participation Factor Summary](Participation Factor Summary.png)
 
-    Click on each Total Deformation to see the different modes such as Flap-wise (bending flat), Edgewise (bending along the edge), or Torsional (twisting) modes.
+Click on each Total Deformation to see the different modes such as Flap-wise (bending flat), Edgewise (bending along the edge), or Torsional (twisting) modes.
 
 **Participation Factor:** Mode participation and effective mass measure Each mode measures the mass movement in each direction. A high value indicates that excitations in that direction will effectively stimulate the mode.
 
