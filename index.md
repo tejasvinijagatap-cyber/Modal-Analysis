@@ -6,17 +6,15 @@ Modal analysis is a basic part of structural engineering that gives you the tool
 
 ## 1.0 Learning Objectives
 
-Define modal analysis and its core components: natural frequency, mode shape, and damping.
+-- Define modal analysis and its core components: natural frequency, mode shape, and damping.
 
-Understand the fundamental mathematical principles governing structural vibration.
+-- Understand the fundamental mathematical principles governing structural vibration.
 
-Differentiate between computational and experimental modal analysis methodologies.
+-- Differentiate between computational and experimental modal analysis methodologies.
 
-Recognize the critical role of modal analysis in engineering design, diagnostics, and structural health monitoring.
+-- Implementation of computational analysis of Windmill Blade using ANSYS to determine its natural frequencies.
 
-Interpret real-world applications and case studies where modal analysis is applied.
-
-We will begin by establishing the fundamental concepts and vocabulary that form the language of modal analysis.
+-- Interpret real-world applications and case studies where modal analysis is applied.
 
 ---
 
