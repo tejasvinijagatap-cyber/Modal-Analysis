@@ -90,9 +90,9 @@ or, more commonly:
 
 Solving this equation yields the structure's inherent modal properties:
 
-Eigenvalues (λ): The solutions for λ are directly related to the squared natural frequencies of the system (λj = ωj²). Each eigenvalue represents a frequency at which the structure naturally vibrates.
+- Eigenvalues (λ): The solutions for λ are directly related to the squared natural frequencies of the system (λj = ωj²). Each eigenvalue represents a frequency at which the structure naturally vibrates.
 
-Eigenvectors ({φ}): For each eigenvalue, there is a corresponding eigenvector {φ}, which is the mode shape. It describes the pattern of deformation the structure undergoes when vibrating at that specific natural frequency.
+- Eigenvectors ({φ}): For each eigenvalue, there is a corresponding eigenvector {φ}, which is the mode shape. It describes the pattern of deformation the structure undergoes when vibrating at that specific natural frequency.
 
 ---
 
@@ -142,21 +142,21 @@ Key Process Steps:
 
 **Choose System:**
 
-From the Toolbox, drag **Modal** into the Project Schematic.
+- From the Toolbox, drag **Modal** into the Project Schematic.
 
 ![Add Modal into project](Add Modal into project.png)
 
 **Geometry:**
 
-Right-click Geometry cell --> Import Geometry
+- Right-click Geometry cell --> Import Geometry
 
-Geometry - [windmill_blade.stp](windmill_blade.stp)
+- Geometry - [windmill_blade.stp](windmill_blade.stp)
 
 **Engineering Data:**
 
-Add material --> **Composite, Epoxy/glass Fiber, woven prepreg, biax**.
+- Add material --> **Composite, Epoxy/glass Fiber, woven prepreg, biax**.
 
-Set Young's Modulus (Stiffness) and Density (Mass).
+- Set Young's Modulus (Stiffness) and Density (Mass).
 
 ![Add new Material](Add new Material.png)
 
@@ -164,21 +164,21 @@ Set Young's Modulus (Stiffness) and Density (Mass).
 
 1. **Meshing**
 
-    Add sizing controls to the trailing edge and tips to make the mesh more precise. Click on Mesh and then click on Generate Mesh.
+- Add sizing controls to the trailing edge and tips to make the mesh more precise. Click on Mesh and then click on Generate Mesh.
 
 ![Meshing](Meshing.png)
 
 2. **Boundary Conditions (Setup)**
 
-    Context: A windmill blade is a cantilever beam (fixed at one end, free at the other).
+- Context: A windmill blade is a cantilever beam (fixed at one end, free at the other).
 
-    Right-click Modal (A5) --> Insert --> Fixed Support.
+- Right-click Modal (A5) --> Insert --> Fixed Support.
 
 ![Apply Boundary Conditions](Apply Boundary Conditions.png)
 
 3. **Analysis Settings**
 
-    Click **Analysis Settings** in the tree.
+- Click **Analysis Settings** in the tree.
 
 ![Analysis Settings](Analysis Settings.png)
 
@@ -188,25 +188,25 @@ Set Young's Modulus (Stiffness) and Density (Mass).
 
 1. **Solve**
 
-    Right-click Solution (A6) --> Solve.
+- Right-click Solution (A6) --> Solve.
 
-    Look at the Tabular Data table to see the natural frequencies (Hz) for Review Frequencies.
+- Look at the Tabular Data table to see the natural frequencies (Hz) for Review Frequencies.
 
 2. **Visualizing Mode Shapes**
 
-    To see how the blade moves at these **Frequencies(Hz)**:
+- To see how the blade moves at these **Frequencies(Hz)**:
 
 ![Natural Frequencies](Natural Frequencies.png)
 
-Select all the rows in the Tabular Data window.
+- Select all the rows in the Tabular Data window.
 
 ![Create Mode Shapes Result](Create Mode Shapes Result.png)
 
-Right-click --> **Create Mode Shape Results**.
+- Right-click --> **Create Mode Shape Results**.
 
 This adds **"Total Deformation"** items to your Solution tree.
 
-Right-click Solution --> Evaluate All Results.
+- Right-click Solution --> Evaluate All Results.
 
 ![Total Deformation_1](Total Deformation_1.png)
 
@@ -214,11 +214,11 @@ Right-click Solution --> Evaluate All Results.
 
 ![Total Deformation_3](Total Deformation_3.png)
 
-From Solution Information change solution output to **Participation Factor Summary**.
+- From Solution Information change solution output to **Participation Factor Summary**.
 
 ![Participation Factor Summary](Participation Factor Summary.png)
 
-Click on each Total Deformation to see the different modes such as Flap-wise (bending flat), Edgewise (bending along the edge), or Torsional (twisting) modes.
+- Click on each Total Deformation to see the different modes such as Flap-wise (bending flat), Edgewise (bending along the edge), or Torsional (twisting) modes.
 
 **Participation Factor:** Mode participation and effective mass measure Each mode measures the mass movement in each direction. A high value indicates that excitations in that direction will effectively stimulate the mode.
 
