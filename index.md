@@ -79,6 +79,20 @@ We look at how the structure behaves during free, undamped vibrations to find it
 This simplification changes the general equation of motion into a basic eigenvalue problem, which can be written as:
 
 ```
+[M]{ü(t)} + [K]{u(t)} = 0
+```
+Assume Harmonic motion:
+
+\[
+\mathbf{x}(t) = \boldsymbol{\phi} \, e^{i \omega t}
+\]
+
+where:
+- \( \boldsymbol{\phi} \) is the mode shape (time-independent),
+- \( \omega \) is the natural angular frequency,
+- \( e^{i\omega t} \) represents harmonic motion.
+
+```
 ([K] - λ[M]) {φ} = {0}
 ```
 
